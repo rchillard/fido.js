@@ -1,4 +1,4 @@
-# fidojs
+# fido
 
 FIDO is an acronym for Fetch Input Display Output (FIDO).  
 
