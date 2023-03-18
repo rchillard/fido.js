@@ -2,7 +2,7 @@
 
 FIDO is an acronym for Fetch Input Display Output (FIDO).  
 
-This is a JavaScript simple frontend component that accepts HTML as a regular String, a reference to a parent DOM element, and a URL for an endpoint with JSON data.  FIDO fetches data from the URL, hydrates the HTML template, and updates the DOM.  It has meaningful network handling, as well as the concept of internal state.
+This is a small JavaScript library that accepts HTML as a regular String, a reference to a parent DOM element, and a URL for an endpoint with JSON data.  FIDO fetches data from the URL, hydrates the HTML template, and updates the DOM.  It has meaningful network handling, as well as the concept of internal state.
 
 ## Background
 
