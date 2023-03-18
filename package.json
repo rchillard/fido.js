@@ -2,7 +2,7 @@
   "name": "@rchillard/fido",
   "version": "1.0.0",
   "description": "Fetch Input Display Output (FIDO) is a JavaScript library for retrieving data, hydrating that data into an HTML template, and then rendering it in the DOM",
-  "main": "fido.js",
+  "main": "src/fido.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
