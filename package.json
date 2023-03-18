@@ -1,0 +1,25 @@
+{
+  "name": "fidojs",
+  "version": "1.0.0",
+  "description": "Fetch Input Display Output (FIDO) is a JavaScript library for retrieving data, hydrating that data into an HTML template, and then rendering it in the DOM",
+  "main": "fido.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rchillard/fidojs.git"
+  },
+  "keywords": [
+    "front-end",
+    "library",
+    "html",
+    "render"
+  ],
+  "author": "RCH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rchillard/fidojs/issues"
+  },
+  "homepage": "https://github.com/rchillard/fidojs#readme"
+}
