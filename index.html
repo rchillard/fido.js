@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fidojs example</title>
+    <style>
+        mark {
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Example</h1>
+        <div id="hydrateMe"></div>
+    </main>
+    <script src="fido.js">
+        // Fetch Input Display Output (FIDO) constructor accepts three parameters:
+        // html = template HTML as a regular String including references JSON keys
+        // id = id of the element that should be hydrated with this HTML
+        // url  = API containing JSON
+    </script>
+    <script>
+        const htmlTemplate = "<p>${name} is ${height} centimeters tall with <mark>${hair_color} hair</mark>.</p>";
+        console.log(htmlTemplate);
+        const FidoExample = new Fido(htmlTemplate, 'hydrateMe', 'https://swapi.dev/api/people/1/');
+    </script>
+</body>
+
+</html>
