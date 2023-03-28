@@ -26,8 +26,16 @@
     </script>
     <script>
         const htmlTemplate = "<p>${name} is ${height} centimeters tall with <mark>${hair_color} hair</mark>.</p>";
-        console.log(htmlTemplate);
+
+        // DOM Tests
+        // const FidoExample = new Fido(htmlTemplate, 'DoesNotExist', 'https://swapi.dev/api/people/1/');
+
+        // Network Tests
+        // 200 test URL
         const FidoExample = new Fido(htmlTemplate, 'hydrateMe', 'https://swapi.dev/api/people/1/');
+
+        // 429 test URL
+        // const FidoExample = new Fido(htmlTemplate, 'hydrateMe', 'https://httpbin.org/status/429');
     </script>
 </body>
 
