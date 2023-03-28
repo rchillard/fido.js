@@ -6,7 +6,7 @@ This is a small JavaScript library that accepts HTML as a regular String, a refe
 
 ## Background
 
-After having written the same boilerplate code for many different projects, I decided to create this library.  Often times, I have found that many simple pages feature a single large component, fetch data to populate that component, then render the result to the DOM.  fidojs makes this task easy.
+After having written the same boilerplate code for many different projects, I decided to create this library.  Often times, I have found that many simple pages feature a single large component, fetch data to populate that component, then render the result to the DOM.  fido makes this task easy.
 
 ## Usage
 
