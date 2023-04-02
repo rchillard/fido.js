@@ -19,23 +19,28 @@
         <div id="hydrateMe"></div>
     </main>
     <script src="fido.js">
-        // Fetch Input Display Output (FIDO) constructor accepts three parameters:
+        // Fetch Input Display Output (FIDO) returns a render() method that accepts four parameters:
         // html = template HTML as a regular String including references JSON keys
         // id = id of the element that should be hydrated with this HTML
         // url  = API containing JSON
+        // options = fetch request options: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     </script>
     <script>
+
         const htmlTemplate = "<p>${name} is ${height} centimeters tall with <mark>${hair_color} hair</mark>.</p>";
+        const urlExample = 'https://swapi.dev/api/people/1/';
 
-        // DOM Tests
-        // const FidoExample = new Fido(htmlTemplate, 'DoesNotExist', 'https://swapi.dev/api/people/1/');
+        // Failure Test
+        // No DOM element found
+        // fido.render(htmlTemplate, 'DoesNotExist', 'https://swapi.dev/api/people/1/');
 
-        // Network Tests
-        // 200 test URL
-        const FidoExample = new Fido(htmlTemplate, 'hydrateMe', 'https://swapi.dev/api/people/1/');
+        // Success Test
+        // DOM element should render with HTTP request returning 200
+        // fido.render(htmlTemplate, 'hydrateMe', urlExample);
 
-        // 429 test URL
-        // const FidoExample = new Fido(htmlTemplate, 'hydrateMe', 'https://httpbin.org/status/429');
+        // Failure Test
+        // Network request should fail with HTTP returnung 429
+        // fido.render(htmlTemplate, 'hydrateMe', 'https://httpbin.org/status/429');
     </script>
 </body>
 

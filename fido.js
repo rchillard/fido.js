@@ -1,6 +1,8 @@
-let Fido = (function (html, id, url, options) {
-    console.debug(`Fido has loaded: ${html}, ${id}, ${url}`)
-    render(html, id, url, options);
+// fetch input display output (fido)
+// Usage: render(html, id, url, options)
+// Design: https://vanillajstoolkit.com/boilerplates/revealing-module-pattern/
+
+let fido = (function () {
 
     /**
      * Fetches data from a given URL with exponential backoff and retries.
@@ -51,6 +53,8 @@ let Fido = (function (html, id, url, options) {
      * @throws {Response|Error} - Throws a Response object if the fetch request fails, or an Error object if there's a problem with the fetch request or JSON parsing.
      */
     async function render(html, id, url, options) {
+        console.debug(`fido render(): ${html}, ${id}, ${url}`)
+
         const targetElement = document.getElementById(id);
 
         if (targetElement) {
@@ -71,7 +75,7 @@ let Fido = (function (html, id, url, options) {
      *
      * @param {string} templateString - The template string containing placeholders in the format ${variable}.
      * @param {object} data - An object containing key-value pairs, where keys match the variable names in the placeholders.
-     * @returns {string} The template string with placeholders replaced by the corresponding values from the data object. If a variable is not found in the data object, the original placeholder is left unchanged.
+     * @returns {string} - The template string with placeholders replaced by the corresponding values from the data object. If a variable is not found in the data object, the original placeholder is left unchanged.
      */
     function template(templateString, data) {
         return templateString.replace(/\$\{(\w+)\}/g, (match, variable) => {
@@ -79,4 +83,5 @@ let Fido = (function (html, id, url, options) {
         });
     }
 
-});
+    return { render };
+})();
